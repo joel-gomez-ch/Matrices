@@ -2,25 +2,19 @@
 using namespace std;
 int main() {
 	
-    int n;
-    cin >> n;
-    int matriz[n][n];
+    int m, n, suma;
+    cin >> m >> n;
+    int matriz[m][n];
+    suma = 0;
     
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            if (i <= j) {
-                matriz[i][j] = 1;
-            } else {
-                matriz[i][j] = 0;
-            }
+        	cin >> matriz[i][j];
+            suma = suma + matriz[i][j];
         }
     }
     
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << matriz[i][j] << " ";
-        }
-        cout <<endl;
-    }
+    cout << suma;
+    
     return 0;
 }
